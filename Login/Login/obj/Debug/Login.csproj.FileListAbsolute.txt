@@ -30,3 +30,6 @@ A:\WorkSpace\Login\Login\obj\Debug\Login.csproj.CopyComplete
 A:\WorkSpace\Login\Login\obj\Debug\Login.exe
 A:\WorkSpace\Login\Login\obj\Debug\Login.pdb
 A:\WorkSpace\Login\Login\obj\Debug\Login_Content.g.cs
+A:\WorkSpace\Login\Login\bin\Debug\Resources\fondo.jpg
+A:\WorkSpace\Login\Login\obj\Debug\Login.csprojAssemblyReference.cache
+A:\WorkSpace\Login\Login\obj\Debug\App.baml
