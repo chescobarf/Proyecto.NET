@@ -7,19 +7,26 @@
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        BorderThickness="0"                     
+        GlowBrush="{DynamicResource AccentColorBrush}"
+        ResizeMode="CanResizeWithGrip"
+        WindowTransitionsEnabled="False"
+        WindowStartupLocation="CenterScreen"
         Title="Login" Height="476.953" Width="870.99">
+
+
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="Resources/fondo.jpg"/>
+            <ImageBrush ImageSource="Resources/we.jpg"/>
         </Grid.Background>
         <Rectangle HorizontalAlignment="Left" Height="223" Margin="537,164,0,0" VerticalAlignment="Top" Width="230" Stroke="#FFC3C3C3"/>
 
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="21" Margin="596,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161"/>
         <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="596,244,0,0" VerticalAlignment="Top" Width="161" Height="20"/>
-        <Button x:Name="button" Content="Login" HorizontalAlignment="Left" Margin="624,333,0,0" VerticalAlignment="Top" Width="85" Background="#FF80D618" BorderBrush="#FF68B012" Foreground="#FF292929" Height="22" />
+        <Button x:Name="button" Content="Login" HorizontalAlignment="Left" Margin="615,333,0,0" VerticalAlignment="Top" Width="93" Background="#FF80D618" BorderBrush="#FF68B012" Foreground="#FF292929" Height="27" />
         <CheckBox x:Name="checkBox" Content="Recordar Contraseña" HorizontalAlignment="Left" Margin="596,286,0,0" VerticalAlignment="Top" Foreground="White" Background="White" BorderBrush="White" FontSize="14"/>
 
-        <Separator HorizontalAlignment="Left" Height="92" Margin="285,211,0,0" VerticalAlignment="Top" Width="305" RenderTransformOrigin="0.5,0.5" Background="White" Foreground="White">
+        <Separator HorizontalAlignment="Left" Height="92" Margin="283,187,0,0" VerticalAlignment="Top" Width="305" RenderTransformOrigin="0.5,0.5" Background="White" Foreground="White">
             <Separator.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -34,5 +41,15 @@
             <iconPacks:PackIconMaterial Kind="AccountCardDetails" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="30" Width="30"  Canvas.Left="10" Canvas.Top="136"  />
             <iconPacks:PackIconMaterial Kind="Key" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="30" Width="30" Canvas.Left="10" Canvas.Top="180" />
         </Canvas>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="168" Margin="81,137,0,0" VerticalAlignment="Top" Width="317" Source="Resources/feriavirtual.PNG"/>
     </Grid>
+    <Controls:MetroWindow.Flyouts>
+        <Controls:FlyoutsControl>
+            <Controls:Flyout Header="Flyout" Position="Right" Width="200">
+                <!-- Your custom content here -->
+            </Controls:Flyout>
+
+        </Controls:FlyoutsControl>
+    </Controls:MetroWindow.Flyouts>
+
 </Controls:MetroWindow>
