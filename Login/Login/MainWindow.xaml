@@ -12,44 +12,51 @@
         ResizeMode="CanResizeWithGrip"
         WindowTransitionsEnabled="False"
         WindowStartupLocation="CenterScreen"
-        Title="Login" Height="476.953" Width="870.99">
+        Title="Login" Height="720" Width="1280">
+    <StackPanel Height="720" Width="1280">
+        <Grid Height="720" Width="1280">
+            <Grid.Background>
+                <ImageBrush ImageSource="Resources/we.jpg"/>
+            </Grid.Background>
+            <Separator HorizontalAlignment="Left" Height="90" Margin="369,294,0,0" VerticalAlignment="Top" Width="491" RenderTransformOrigin="0.5,0.5" Background="White" Foreground="White">
+                <Separator.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="89.291"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Separator.RenderTransform>
+            </Separator>
+            <Canvas HorizontalAlignment="Left" Height="523" Margin="615,59,0,0" VerticalAlignment="Top" Width="535">
+
+                <Rectangle HorizontalAlignment="Left" Height="342" VerticalAlignment="Top" Width="298" Stroke="#FFC3C3C3" Canvas.Left="137" Canvas.Top="141"/>
+                <iconPacks:PackIconMaterial Kind="AccountMultiple" Height="96" Width="94" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="White" Canvas.Left="243" Canvas.Top="26"/>
+                <iconPacks:PackIconMaterial Kind="AccountCardDetails" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="30" Width="30"  Canvas.Left="174" Canvas.Top="208"  />
+                <iconPacks:PackIconMaterial Kind="Key" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="30" Width="30" Canvas.Left="174" Canvas.Top="288" />
+                <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="21" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" Canvas.Left="228" Canvas.Top="212"/>
+                <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="161" Height="20" Canvas.Left="228" Canvas.Top="292"/>
+                <CheckBox x:Name="checkBox" Content="Recordar Contraseña" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Background="White" BorderBrush="White" FontSize="14" Canvas.Left="212" Canvas.Top="362"/>
+                <Button x:Name="button" Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Width="93" Background="#FF80D618" BorderBrush="#FF68B012" Foreground="#FF292929" Height="26" Canvas.Left="243" Canvas.Top="414" />
+            </Canvas>
+            <Image x:Name="image" HorizontalAlignment="Left" Height="168" Margin="158,254,0,0" VerticalAlignment="Top" Width="316" Source="Resources/feriavirtual.PNG"/>
+            <Button x:Name="button1" Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" HorizontalAlignment="Left" Margin="1021,512,0,0" VerticalAlignment="Top" Width="25" Height="26" BorderBrush="White" Background="#00000000" Click="button1_Click">
+                <iconPacks:PackIconMaterial Kind="Alert" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFCDD43A" Height="15" Width="15" />
+            </Button>
 
 
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="Resources/we.jpg"/>
-        </Grid.Background>
-        <Rectangle HorizontalAlignment="Left" Height="223" Margin="537,164,0,0" VerticalAlignment="Top" Width="230" Stroke="#FFC3C3C3"/>
 
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="21" Margin="596,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161"/>
-        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="596,244,0,0" VerticalAlignment="Top" Width="161" Height="20"/>
-        <Button x:Name="button" Content="Login" HorizontalAlignment="Left" Margin="615,333,0,0" VerticalAlignment="Top" Width="93" Background="#FF80D618" BorderBrush="#FF68B012" Foreground="#FF292929" Height="27" />
-        <CheckBox x:Name="checkBox" Content="Recordar Contraseña" HorizontalAlignment="Left" Margin="596,286,0,0" VerticalAlignment="Top" Foreground="White" Background="White" BorderBrush="White" FontSize="14"/>
 
-        <Separator HorizontalAlignment="Left" Height="92" Margin="283,187,0,0" VerticalAlignment="Top" Width="305" RenderTransformOrigin="0.5,0.5" Background="White" Foreground="White">
-            <Separator.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="89.291"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Separator.RenderTransform>
-        </Separator>
-        <Canvas HorizontalAlignment="Left" Height="341" Margin="537,59,0,0" VerticalAlignment="Top" Width="230">
-            <iconPacks:PackIconMaterial Kind="AccountMultiple" Height="95" Width="95" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="White" Canvas.Left="76"/>
-            <iconPacks:PackIconMaterial Kind="AccountCardDetails" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="30" Width="30"  Canvas.Left="10" Canvas.Top="136"  />
-            <iconPacks:PackIconMaterial Kind="Key" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="30" Width="30" Canvas.Left="10" Canvas.Top="180" />
-        </Canvas>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="168" Margin="81,137,0,0" VerticalAlignment="Top" Width="317" Source="Resources/feriavirtual.PNG"/>
-    </Grid>
-    <Controls:MetroWindow.Flyouts>
-        <Controls:FlyoutsControl>
-            <Controls:Flyout Header="Flyout" Position="Right" Width="200">
-                <!-- Your custom content here -->
+
+
+            <Controls:Flyout x:Name="FlySupport" Width="306" Margin="964,0,10,0" Position="Right" HeaderStringFormat="" Header="Contacta Con El Soporte" Foreground="White" Visibility="Hidden">
+                <Controls:Flyout.Background>
+                    <SolidColorBrush Color="#FF232323" Opacity="0.9"/>
+                </Controls:Flyout.Background>
+                <Canvas Height="588">
+                    <Image Source="Resources/call.png"  Canvas.Left="46" Canvas.Top="338" Width="250" Height="250"></Image>
+                </Canvas>
             </Controls:Flyout>
-
-        </Controls:FlyoutsControl>
-    </Controls:MetroWindow.Flyouts>
-
+        </Grid>
+    </StackPanel>
 </Controls:MetroWindow>

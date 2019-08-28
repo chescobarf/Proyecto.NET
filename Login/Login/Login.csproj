@@ -131,6 +131,8 @@
     <Resource Include="Resources\we.jpg" />
     <Resource Include="Resources\E21.jpg" />
     <Resource Include="Resources\feriavirtual.PNG" />
+    <Resource Include="Resources\Call-Centre-PNG-Photo.png" />
+    <Resource Include="Resources\call.png" />
     <Content Include="Resources\fondo.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
