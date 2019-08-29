@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="77def6d4782c4abfa5398c96ce6727d0" Name="Diagram1" ZoomLevel="101">
+        <EntityTypeShape EntityType="Model.CALIDAD_FRUTA" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.CONTRATO" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DETALLE_VENTA" Width="1.5" PointX="10.5" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.LOGIN" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.OFERTA_PROCESO_VENTA" Width="1.5" PointX="8.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.OFERTA_SUSBASTA" Width="1.5" PointX="8.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PERFIL" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PERSONA" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PROCESO_VENTA" Width="1.5" PointX="6" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PRODUCTO" Width="1.5" PointX="10.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SEGURO_VENTA" Width="1.5" PointX="6" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SUSBASTA" Width="1.5" PointX="6" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TIPO_SEGURO" Width="1.5" PointX="3.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TIPO_VENTA" Width="1.5" PointX="6" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.VENTA" Width="1.5" PointX="8.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PRODUCTO_PROCESO" Width="1.5" PointX="13" PointY="1.5" IsExpanded="true" />
+        <AssociationConnector Association="Model.CALIDAD_FRUTA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.CONTRATO_PERSONA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.DETALLE_VENTA_VENTA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.LOGIN_PERSONA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.PERSONA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.PROCESO_VENTA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.OFERTA_SUSBASTA_PERSONA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.OFERTA_SUSBASTA_SUSBASTA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.PERSONA_PERFIL_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.VENTA_PROCESO_VENTA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.PRODUCTO_PROCESO_PRODUCTO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SEGURO_VENTA_TIPO_SEGURO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.VENTA_SEGURO_VENTA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.VENTA_TIPO_VENTA_FK" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
