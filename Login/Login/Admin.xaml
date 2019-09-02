@@ -1,0 +1,66 @@
+﻿<Controls:MetroWindow x:Class="Login.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        BorderThickness="0"                     
+        GlowBrush="{DynamicResource AccentColorBrush}"
+        ResizeMode="CanResizeWithGrip"
+        WindowTransitionsEnabled="False"
+        WindowStartupLocation="CenterScreen"
+        Title="Login" Height="720" Width="1280">
+    <StackPanel Height="720" Width="1280">
+        <Grid Height="720" Width="1280">
+            <Grid.Background>
+                <ImageBrush ImageSource="Resources/we.jpg"/>
+            </Grid.Background>
+            <Rectangle HorizontalAlignment="Left" Height="687" Stroke="#FFC3C3C3" VerticalAlignment="Top" Width="1280" Fill="#FF363636" Opacity="0.5"/>
+            <Image x:Name="image" HorizontalAlignment="Left" Height="94" Margin="1075,10,0,0" VerticalAlignment="Top" Width="180" Source="Resources/feriavirtual.PNG" Opacity="0.35"/>
+            <Button x:Name="button1" Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" HorizontalAlignment="Left" Margin="1220,652,0,0" VerticalAlignment="Top" Width="35" Height="35" BorderBrush="White" Background="#00000000" Click="button1_Click">
+                <iconPacks:PackIconMaterial Kind="Alert" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFCDD43A" Height="25" Width="25" RenderTransformOrigin="2.706,2.725" />
+            </Button>
+            <Canvas HorizontalAlignment="Left" Height="200" Margin="10,151,0,0" VerticalAlignment="Top" Width="200" Background="#FFFF5252">
+                <iconPacks:PackIconMaterial Kind="AccountCardDetails" Height="96" Width="94" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="White" Canvas.Left="48" Canvas.Top="38"/>
+                <Label x:Name="label1" Content="Crear Usuario" Canvas.Left="32" Canvas.Top="159" FontSize="20" Foreground="White" FontWeight="Bold"/>
+            </Canvas>
+            <Canvas HorizontalAlignment="Left" Height="200" Margin="215,151,0,0" VerticalAlignment="Top" Width="200" Background="#FFFF9952">
+                <iconPacks:PackIconMaterial Kind="FoodApple" Height="96" Width="94" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="White" Canvas.Left="48" Canvas.Top="38"/>
+                <Label x:Name="label2" Content="Crear Frutas" Canvas.Left="32" Canvas.Top="159" FontSize="20" Foreground="White" FontWeight="Bold"/>
+            </Canvas>
+            <Canvas HorizontalAlignment="Left" Height="200" Margin="420,151,0,0" VerticalAlignment="Top" Width="544" Background="#FF0D8FAC">
+                <iconPacks:PackIconMaterial Kind="Passport" Height="96" Width="94" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="White" Canvas.Left="216" Canvas.Top="34"/>
+                <Label x:Name="label3" Content="Crear Ventas" Canvas.Left="206" Canvas.Top="159" FontSize="20" Foreground="White" FontWeight="Bold"/>
+            </Canvas>
+            <Canvas HorizontalAlignment="Left" Height="200" Margin="10,356,0,0" VerticalAlignment="Top" Width="544" Background="#FF0D8FAC">
+                <iconPacks:PackIconMaterial Kind="ClipboardCheck" Height="96" Width="94" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="White" Canvas.Left="216" Canvas.Top="34"/>
+                <Label x:Name="label4" Content="Administrar Contratos" Canvas.Left="156" Canvas.Top="159" FontSize="20" Foreground="White" FontWeight="Bold"/>
+            </Canvas>
+            <Canvas HorizontalAlignment="Left" Height="200" Margin="559,356,0,0" VerticalAlignment="Top" Width="400" Background="#FFFF5252">
+                <iconPacks:PackIconMaterial Kind="Caravan" Height="96" Width="94" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="White" Canvas.Left="167" Canvas.Top="40"/>
+                <Label x:Name="label5" Content="Administrar Transporte" Canvas.Left="96" Canvas.Top="163" FontSize="20" Foreground="White" FontWeight="Bold"/>
+            </Canvas>
+
+
+
+
+            <Controls:Flyout x:Name="FlySupport" Width="306" Margin="964,0,10,0" Position="Right" HeaderStringFormat="" Header="Contacta Con El Soporte" Foreground="White" Visibility="Hidden">
+                <Controls:Flyout.Background>
+                    <SolidColorBrush Color="#FF232323" Opacity="0.9"/>
+                </Controls:Flyout.Background>
+                <Canvas Height="588">
+                    <Image Source="Resources/call.png"  Canvas.Left="46" Canvas.Top="338" Width="250" Height="250"></Image>
+                </Canvas>
+            </Controls:Flyout>
+            <Canvas HorizontalAlignment="Left" Height="104" VerticalAlignment="Top" Width="500" Margin="10,0,0,0">
+                <iconPacks:PackIconMaterial Kind="Face" Height="96" Width="94" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="White" Opacity="0.9" Canvas.Left="25" Canvas.Top="10"/>
+                <Label x:Name="label" Content="Bienvenido Administrador" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="24" Canvas.Left="142" Canvas.Top="52"/>
+            </Canvas>
+
+
+        </Grid>
+    </StackPanel>
+</Controls:MetroWindow>

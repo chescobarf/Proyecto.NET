@@ -11,9 +11,9 @@ namespace WebServiceAPI.Controllers
     public class LoginController : ApiController
     {
         Login Log = new Login();
-
+        
         //GET http://<server>/api/login     HTTP/1.1
-        public bool GetValidacion(decimal usr, string pass)
+        public bool PostAuth(decimal usr, string pass)
         {
             return Log.Validar(usr, pass);
         }
