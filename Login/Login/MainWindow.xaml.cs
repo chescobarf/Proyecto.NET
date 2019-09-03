@@ -30,7 +30,7 @@ namespace Login
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            FlySupport.IsOpen = true;
+			Contacto.IsOpen = true;
         }
     }
 }

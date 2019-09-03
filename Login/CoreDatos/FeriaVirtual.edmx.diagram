@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="91688963026a43d7afdc8e7342ebad3d" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.CALIDAD_FRUTA" Width="1.5" PointX="0.75" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.CONTRATO" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DETALLE_VENTA" Width="1.5" PointX="8.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.FRUTA" Width="1.5" PointX="3" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.LOGIN" Width="1.5" PointX="3" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.OFERTA_PROCESO_VENTA" Width="1.5" PointX="10.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.OFERTA_SUBASTA" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.OFERTA_SUSBASTA" Width="1.5" PointX="8" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.OFERTA_VENTA" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PERFIL" Width="1.5" PointX="1.5" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PERSONA" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PROCESO_VENTA" Width="1.5" PointX="3.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PRODUCTO" Width="1.5" PointX="5.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SEGURO_VENTA" Width="1.5" PointX="3.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SUBASTA_TRANSPORTE" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SUSBASTA" Width="1.5" PointX="5.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TIPO_SEGURO" Width="1.5" PointX="1.5" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TIPO_VENTA" Width="1.5" PointX="3.75" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.VENTA" Width="1.5" PointX="6" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DETALLE_OFERTA" Width="1.5" PointX="5.25" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PRODUCTO_OFERTA" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PRODUCTO_PROCESO" Width="1.5" PointX="8" PointY="11.625" IsExpanded="true" />
+        <AssociationConnector Association="Model.OFERTA_VENTA_CALIDAD_FRUTA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.CONTRATO_PERSONA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.DETALLE_VENTA_VENTA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.PRODUCTO_OFERTA_FRUTA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.LOGIN_PERSONA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.OFERTA_SUBASTA_PERSONA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.OFERTA_SUBASTA_TRANSPORTE_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.OFERTA_SUSBASTA_SUSBASTA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.DETALLE_OFERTA_OFERTA_VENTA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.OFERTA_VENTA_PERSONA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.PRODUCTO_OFERTA_VENTA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.PERSONA_PERFIL_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.VENTA_PROCESO_VENTA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.PRODUCTO_PROCESO_PRODUCTO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SEGURO_VENTA_TIPO_SEGURO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.VENTA_SEGURO_VENTA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.VENTA_SUBASTA_TRANSPORTE_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.VENTA_TIPO_VENTA_FK" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

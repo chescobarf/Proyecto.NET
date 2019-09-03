@@ -1,0 +1,542 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="12.1" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CALIDAD_FRUTA">
+    <Key>
+      <PropertyRef Name="CALIDAD" />
+    </Key>
+    <Property Name="CALIDAD" Type="varchar2" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CONTRATO">
+    <Key>
+      <PropertyRef Name="ID_CONTRATO" />
+    </Key>
+    <Property Name="ID_CONTRATO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="FECHA_INI" Type="date" Nullable="false" />
+    <Property Name="FECHA_FIN" Type="date" Nullable="false" />
+    <Property Name="ANEXO_PDF" Type="varchar2" MaxLength="40" />
+    <Property Name="PERSONA_RUT" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'PORTAFOLIO.DETALLE_OFERTA' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="DETALLE_OFERTA">
+    <Key>
+      <PropertyRef Name="PROCESO_VENTA_ID_PROCESO" />
+      <PropertyRef Name="OFERTA_VENTA_ID_OFERTA" />
+    </Key>
+    <Property Name="PROCESO_VENTA_ID_PROCESO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="OFERTA_VENTA_ID_OFERTA" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DETALLE_VENTA">
+    <Key>
+      <PropertyRef Name="VENTA_ID_PROCESO" />
+      <PropertyRef Name="VENTA_ID_VENTA" />
+    </Key>
+    <Property Name="COSTO_TRANSPORTE" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="IMPTO_ADUANERO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PAGO_SERVICIO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="COMISION_EMP" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="VENTA_ID_PROCESO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="VENTA_ID_VENTA" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FRUTA">
+    <Key>
+      <PropertyRef Name="ID_FRUTA" />
+    </Key>
+    <Property Name="ID_FRUTA" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LOGIN">
+    <Key>
+      <PropertyRef Name="PERSONA_RUT" />
+    </Key>
+    <Property Name="PASSWORD" Type="varchar2" MaxLength="100" Nullable="false" />
+    <Property Name="ESTADO" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="PERSONA_RUT" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OFERTA_PROCESO_VENTA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="COSTO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="STOCK" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="CALIDAD_FRUTA_CALIDAD" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="PROCESO_VENTA_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PERSONA_RUT" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OFERTA_SUBASTA">
+    <Key>
+      <PropertyRef Name="ID_OFERTA" />
+    </Key>
+    <Property Name="ID_OFERTA" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PRECIO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PERSONA_RUT" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="SUBASTA_TRANSPORTE_ID_SUBASTA" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OFERTA_SUSBASTA">
+    <Key>
+      <PropertyRef Name="ID_OFERTA" />
+    </Key>
+    <Property Name="ID_OFERTA" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PRECIO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TAMAÑO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="CAPACIDAD_CARGA" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="REFRIGERACION" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="PERSONA_RUT" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="SUSBASTA_ID_SUBASTA" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OFERTA_VENTA">
+    <Key>
+      <PropertyRef Name="ID_OFERTA" />
+    </Key>
+    <Property Name="ID_OFERTA" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="COSTO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="CALIDAD_FRUTA_CALIDAD" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="PERSONA_RUT" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PERFIL">
+    <Key>
+      <PropertyRef Name="ID_PERFIL" />
+    </Key>
+    <Property Name="ID_PERFIL" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PERSONA">
+    <Key>
+      <PropertyRef Name="RUT" />
+    </Key>
+    <Property Name="RUT" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="RUT_DV" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="30" Nullable="false" />
+    <Property Name="APELLIDO" Type="varchar2" MaxLength="30" Nullable="false" />
+    <Property Name="EMAIL" Type="varchar2" MaxLength="40" Nullable="false" />
+    <Property Name="PERFIL_ID_PERFIL" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PROCESO_VENTA">
+    <Key>
+      <PropertyRef Name="ID_PROCESO" />
+    </Key>
+    <Property Name="ID_PROCESO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="FECHA_INI" Type="date" Nullable="false" />
+    <Property Name="FECHA_FIN" Type="date" Nullable="false" />
+    <Property Name="ESTADO_PROCESO" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PRODUCTO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'PORTAFOLIO.PRODUCTO_OFERTA' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="PRODUCTO_OFERTA">
+    <Key>
+      <PropertyRef Name="FRUTA_ID_FRUTA" />
+      <PropertyRef Name="OFERTA_VENTA_ID_OFERTA" />
+      <PropertyRef Name="CANTIDAD" />
+      <PropertyRef Name="COSTO" />
+    </Key>
+    <Property Name="FRUTA_ID_FRUTA" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="OFERTA_VENTA_ID_OFERTA" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="CANTIDAD" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="COSTO" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'PORTAFOLIO.PRODUCTO_PROCESO' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="PRODUCTO_PROCESO">
+    <Key>
+      <PropertyRef Name="PRODUCTO_ID" />
+      <PropertyRef Name="OFERTA_PROCESO_VENTA_ID" />
+    </Key>
+    <Property Name="PRODUCTO_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="OFERTA_PROCESO_VENTA_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SEGURO_VENTA">
+    <Key>
+      <PropertyRef Name="ID_SEGURO" />
+    </Key>
+    <Property Name="ID_SEGURO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ASEGURADORA" Type="varchar2" MaxLength="30" Nullable="false" />
+    <Property Name="VALOR" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TIPO_SEGURO_ID_TIPO_SEGURO" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SUBASTA_TRANSPORTE">
+    <Key>
+      <PropertyRef Name="ID_SUBASTA" />
+    </Key>
+    <Property Name="ID_SUBASTA" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="FECHA_INI" Type="date" Nullable="false" />
+    <Property Name="FECHA_FIN" Type="date" Nullable="false" />
+    <Property Name="CAPACIDAD_CARGA" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TAMANO_CARGA" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="REFRIGERACION" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="ESTADO" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SUSBASTA">
+    <Key>
+      <PropertyRef Name="ID_SUBASTA" />
+    </Key>
+    <Property Name="ID_SUBASTA" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="FECHA_INI" Type="date" Nullable="false" />
+    <Property Name="FECHA_FIN" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIPO_SEGURO">
+    <Key>
+      <PropertyRef Name="ID_TIPO_SEGURO" />
+    </Key>
+    <Property Name="ID_TIPO_SEGURO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIPO_VENTA">
+    <Key>
+      <PropertyRef Name="ID_TIPO_VENTA" />
+    </Key>
+    <Property Name="ID_TIPO_VENTA" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VENTA">
+    <Key>
+      <PropertyRef Name="ID_VENTA" />
+      <PropertyRef Name="PROCESO_VENTA_ID_PROCESO" />
+    </Key>
+    <Property Name="ID_VENTA" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="FECHA" Type="date" Nullable="false" />
+    <Property Name="TOTAL" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TIPO_VENTA_ID_TIPO_VENTA" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PROCESO_VENTA_ID_PROCESO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="SEGURO_VENTA_ID_SEGURO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="SUBASTA_TRANSPORTE_ID_SUBASTA" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <Association Name="CONTRATO_PERSONA_FK">
+    <End Role="PERSONA" Type="Self.PERSONA" Multiplicity="1" />
+    <End Role="CONTRATO" Type="Self.CONTRATO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERSONA">
+        <PropertyRef Name="RUT" />
+      </Principal>
+      <Dependent Role="CONTRATO">
+        <PropertyRef Name="PERSONA_RUT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DETALLE_OFERTA_OFERTA_VENTA_FK">
+    <End Role="OFERTA_VENTA" Type="Self.OFERTA_VENTA" Multiplicity="1" />
+    <End Role="DETALLE_OFERTA" Type="Self.DETALLE_OFERTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OFERTA_VENTA">
+        <PropertyRef Name="ID_OFERTA" />
+      </Principal>
+      <Dependent Role="DETALLE_OFERTA">
+        <PropertyRef Name="OFERTA_VENTA_ID_OFERTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DETALLE_VENTA_VENTA_FK">
+    <End Role="VENTA" Type="Self.VENTA" Multiplicity="1" />
+    <End Role="DETALLE_VENTA" Type="Self.DETALLE_VENTA" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="VENTA">
+        <PropertyRef Name="PROCESO_VENTA_ID_PROCESO" />
+        <PropertyRef Name="ID_VENTA" />
+      </Principal>
+      <Dependent Role="DETALLE_VENTA">
+        <PropertyRef Name="VENTA_ID_PROCESO" />
+        <PropertyRef Name="VENTA_ID_VENTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LOGIN_PERSONA_FK">
+    <End Role="PERSONA" Type="Self.PERSONA" Multiplicity="1" />
+    <End Role="LOGIN" Type="Self.LOGIN" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PERSONA">
+        <PropertyRef Name="RUT" />
+      </Principal>
+      <Dependent Role="LOGIN">
+        <PropertyRef Name="PERSONA_RUT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OFERTA_SUBASTA_PERSONA_FK">
+    <End Role="PERSONA" Type="Self.PERSONA" Multiplicity="1" />
+    <End Role="OFERTA_SUBASTA" Type="Self.OFERTA_SUBASTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERSONA">
+        <PropertyRef Name="RUT" />
+      </Principal>
+      <Dependent Role="OFERTA_SUBASTA">
+        <PropertyRef Name="PERSONA_RUT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OFERTA_SUBASTA_TRANSPORTE_FK">
+    <End Role="SUBASTA_TRANSPORTE" Type="Self.SUBASTA_TRANSPORTE" Multiplicity="1" />
+    <End Role="OFERTA_SUBASTA" Type="Self.OFERTA_SUBASTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUBASTA_TRANSPORTE">
+        <PropertyRef Name="ID_SUBASTA" />
+      </Principal>
+      <Dependent Role="OFERTA_SUBASTA">
+        <PropertyRef Name="SUBASTA_TRANSPORTE_ID_SUBASTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OFERTA_SUSBASTA_SUSBASTA_FK">
+    <End Role="SUSBASTA" Type="Self.SUSBASTA" Multiplicity="1" />
+    <End Role="OFERTA_SUSBASTA" Type="Self.OFERTA_SUSBASTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUSBASTA">
+        <PropertyRef Name="ID_SUBASTA" />
+      </Principal>
+      <Dependent Role="OFERTA_SUSBASTA">
+        <PropertyRef Name="SUSBASTA_ID_SUBASTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OFERTA_VENTA_CALIDAD_FRUTA_FK">
+    <End Role="CALIDAD_FRUTA" Type="Self.CALIDAD_FRUTA" Multiplicity="1" />
+    <End Role="OFERTA_VENTA" Type="Self.OFERTA_VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CALIDAD_FRUTA">
+        <PropertyRef Name="CALIDAD" />
+      </Principal>
+      <Dependent Role="OFERTA_VENTA">
+        <PropertyRef Name="CALIDAD_FRUTA_CALIDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OFERTA_VENTA_PERSONA_FK">
+    <End Role="PERSONA" Type="Self.PERSONA" Multiplicity="1" />
+    <End Role="OFERTA_VENTA" Type="Self.OFERTA_VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERSONA">
+        <PropertyRef Name="RUT" />
+      </Principal>
+      <Dependent Role="OFERTA_VENTA">
+        <PropertyRef Name="PERSONA_RUT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PERSONA_PERFIL_FK">
+    <End Role="PERFIL" Type="Self.PERFIL" Multiplicity="1" />
+    <End Role="PERSONA" Type="Self.PERSONA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERFIL">
+        <PropertyRef Name="ID_PERFIL" />
+      </Principal>
+      <Dependent Role="PERSONA">
+        <PropertyRef Name="PERFIL_ID_PERFIL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRODUCTO_OFERTA_FRUTA_FK">
+    <End Role="FRUTA" Type="Self.FRUTA" Multiplicity="1" />
+    <End Role="PRODUCTO_OFERTA" Type="Self.PRODUCTO_OFERTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FRUTA">
+        <PropertyRef Name="ID_FRUTA" />
+      </Principal>
+      <Dependent Role="PRODUCTO_OFERTA">
+        <PropertyRef Name="FRUTA_ID_FRUTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRODUCTO_OFERTA_VENTA_FK">
+    <End Role="OFERTA_VENTA" Type="Self.OFERTA_VENTA" Multiplicity="1" />
+    <End Role="PRODUCTO_OFERTA" Type="Self.PRODUCTO_OFERTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OFERTA_VENTA">
+        <PropertyRef Name="ID_OFERTA" />
+      </Principal>
+      <Dependent Role="PRODUCTO_OFERTA">
+        <PropertyRef Name="OFERTA_VENTA_ID_OFERTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRODUCTO_PROCESO_PRODUCTO_FK">
+    <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="1" />
+    <End Role="PRODUCTO_PROCESO" Type="Self.PRODUCTO_PROCESO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTO_PROCESO">
+        <PropertyRef Name="PRODUCTO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SEGURO_VENTA_TIPO_SEGURO_FK">
+    <End Role="TIPO_SEGURO" Type="Self.TIPO_SEGURO" Multiplicity="1" />
+    <End Role="SEGURO_VENTA" Type="Self.SEGURO_VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_SEGURO">
+        <PropertyRef Name="ID_TIPO_SEGURO" />
+      </Principal>
+      <Dependent Role="SEGURO_VENTA">
+        <PropertyRef Name="TIPO_SEGURO_ID_TIPO_SEGURO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VENTA_PROCESO_VENTA_FK">
+    <End Role="PROCESO_VENTA" Type="Self.PROCESO_VENTA" Multiplicity="1" />
+    <End Role="VENTA" Type="Self.VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROCESO_VENTA">
+        <PropertyRef Name="ID_PROCESO" />
+      </Principal>
+      <Dependent Role="VENTA">
+        <PropertyRef Name="PROCESO_VENTA_ID_PROCESO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VENTA_SEGURO_VENTA_FK">
+    <End Role="SEGURO_VENTA" Type="Self.SEGURO_VENTA" Multiplicity="1" />
+    <End Role="VENTA" Type="Self.VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEGURO_VENTA">
+        <PropertyRef Name="ID_SEGURO" />
+      </Principal>
+      <Dependent Role="VENTA">
+        <PropertyRef Name="SEGURO_VENTA_ID_SEGURO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VENTA_SUBASTA_TRANSPORTE_FK">
+    <End Role="SUBASTA_TRANSPORTE" Type="Self.SUBASTA_TRANSPORTE" Multiplicity="1" />
+    <End Role="VENTA" Type="Self.VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUBASTA_TRANSPORTE">
+        <PropertyRef Name="ID_SUBASTA" />
+      </Principal>
+      <Dependent Role="VENTA">
+        <PropertyRef Name="SUBASTA_TRANSPORTE_ID_SUBASTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VENTA_TIPO_VENTA_FK">
+    <End Role="TIPO_VENTA" Type="Self.TIPO_VENTA" Multiplicity="1" />
+    <End Role="VENTA" Type="Self.VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_VENTA">
+        <PropertyRef Name="ID_TIPO_VENTA" />
+      </Principal>
+      <Dependent Role="VENTA">
+        <PropertyRef Name="TIPO_VENTA_ID_TIPO_VENTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="CALIDAD_FRUTA" EntityType="Self.CALIDAD_FRUTA" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="CONTRATO" EntityType="Self.CONTRATO" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="DETALLE_VENTA" EntityType="Self.DETALLE_VENTA" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="FRUTA" EntityType="Self.FRUTA" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="LOGIN" EntityType="Self.LOGIN" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="OFERTA_PROCESO_VENTA" EntityType="Self.OFERTA_PROCESO_VENTA" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="OFERTA_SUBASTA" EntityType="Self.OFERTA_SUBASTA" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="OFERTA_SUSBASTA" EntityType="Self.OFERTA_SUSBASTA" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="OFERTA_VENTA" EntityType="Self.OFERTA_VENTA" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="PERFIL" EntityType="Self.PERFIL" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="PERSONA" EntityType="Self.PERSONA" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="PROCESO_VENTA" EntityType="Self.PROCESO_VENTA" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="PRODUCTO" EntityType="Self.PRODUCTO" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="SEGURO_VENTA" EntityType="Self.SEGURO_VENTA" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="SUBASTA_TRANSPORTE" EntityType="Self.SUBASTA_TRANSPORTE" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="SUSBASTA" EntityType="Self.SUSBASTA" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="TIPO_SEGURO" EntityType="Self.TIPO_SEGURO" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="TIPO_VENTA" EntityType="Self.TIPO_VENTA" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="VENTA" EntityType="Self.VENTA" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="DETALLE_OFERTA" EntityType="Self.DETALLE_OFERTA" store:Type="Tables" store:Schema="PORTAFOLIO">
+      <DefiningQuery>SELECT 
+"DETALLE_OFERTA"."PROCESO_VENTA_ID_PROCESO" AS "PROCESO_VENTA_ID_PROCESO", 
+"DETALLE_OFERTA"."OFERTA_VENTA_ID_OFERTA" AS "OFERTA_VENTA_ID_OFERTA"
+FROM "PORTAFOLIO"."DETALLE_OFERTA" "DETALLE_OFERTA"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PRODUCTO_OFERTA" EntityType="Self.PRODUCTO_OFERTA" store:Type="Tables" store:Schema="PORTAFOLIO">
+      <DefiningQuery>SELECT 
+"PRODUCTO_OFERTA"."FRUTA_ID_FRUTA" AS "FRUTA_ID_FRUTA", 
+"PRODUCTO_OFERTA"."OFERTA_VENTA_ID_OFERTA" AS "OFERTA_VENTA_ID_OFERTA", 
+"PRODUCTO_OFERTA"."CANTIDAD" AS "CANTIDAD", 
+"PRODUCTO_OFERTA"."COSTO" AS "COSTO"
+FROM "PORTAFOLIO"."PRODUCTO_OFERTA" "PRODUCTO_OFERTA"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PRODUCTO_PROCESO" EntityType="Self.PRODUCTO_PROCESO" store:Type="Tables" store:Schema="PORTAFOLIO">
+      <DefiningQuery>SELECT 
+"PRODUCTO_PROCESO"."PRODUCTO_ID" AS "PRODUCTO_ID", 
+"PRODUCTO_PROCESO"."OFERTA_PROCESO_VENTA_ID" AS "OFERTA_PROCESO_VENTA_ID"
+FROM "PORTAFOLIO"."PRODUCTO_PROCESO" "PRODUCTO_PROCESO"</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="CONTRATO_PERSONA_FK" Association="Self.CONTRATO_PERSONA_FK">
+      <End Role="PERSONA" EntitySet="PERSONA" />
+      <End Role="CONTRATO" EntitySet="CONTRATO" />
+    </AssociationSet>
+    <AssociationSet Name="DETALLE_OFERTA_OFERTA_VENTA_FK" Association="Self.DETALLE_OFERTA_OFERTA_VENTA_FK">
+      <End Role="OFERTA_VENTA" EntitySet="OFERTA_VENTA" />
+      <End Role="DETALLE_OFERTA" EntitySet="DETALLE_OFERTA" />
+    </AssociationSet>
+    <AssociationSet Name="DETALLE_VENTA_VENTA_FK" Association="Self.DETALLE_VENTA_VENTA_FK">
+      <End Role="VENTA" EntitySet="VENTA" />
+      <End Role="DETALLE_VENTA" EntitySet="DETALLE_VENTA" />
+    </AssociationSet>
+    <AssociationSet Name="LOGIN_PERSONA_FK" Association="Self.LOGIN_PERSONA_FK">
+      <End Role="PERSONA" EntitySet="PERSONA" />
+      <End Role="LOGIN" EntitySet="LOGIN" />
+    </AssociationSet>
+    <AssociationSet Name="OFERTA_SUBASTA_PERSONA_FK" Association="Self.OFERTA_SUBASTA_PERSONA_FK">
+      <End Role="PERSONA" EntitySet="PERSONA" />
+      <End Role="OFERTA_SUBASTA" EntitySet="OFERTA_SUBASTA" />
+    </AssociationSet>
+    <AssociationSet Name="OFERTA_SUBASTA_TRANSPORTE_FK" Association="Self.OFERTA_SUBASTA_TRANSPORTE_FK">
+      <End Role="SUBASTA_TRANSPORTE" EntitySet="SUBASTA_TRANSPORTE" />
+      <End Role="OFERTA_SUBASTA" EntitySet="OFERTA_SUBASTA" />
+    </AssociationSet>
+    <AssociationSet Name="OFERTA_SUSBASTA_SUSBASTA_FK" Association="Self.OFERTA_SUSBASTA_SUSBASTA_FK">
+      <End Role="SUSBASTA" EntitySet="SUSBASTA" />
+      <End Role="OFERTA_SUSBASTA" EntitySet="OFERTA_SUSBASTA" />
+    </AssociationSet>
+    <AssociationSet Name="OFERTA_VENTA_CALIDAD_FRUTA_FK" Association="Self.OFERTA_VENTA_CALIDAD_FRUTA_FK">
+      <End Role="CALIDAD_FRUTA" EntitySet="CALIDAD_FRUTA" />
+      <End Role="OFERTA_VENTA" EntitySet="OFERTA_VENTA" />
+    </AssociationSet>
+    <AssociationSet Name="OFERTA_VENTA_PERSONA_FK" Association="Self.OFERTA_VENTA_PERSONA_FK">
+      <End Role="PERSONA" EntitySet="PERSONA" />
+      <End Role="OFERTA_VENTA" EntitySet="OFERTA_VENTA" />
+    </AssociationSet>
+    <AssociationSet Name="PERSONA_PERFIL_FK" Association="Self.PERSONA_PERFIL_FK">
+      <End Role="PERFIL" EntitySet="PERFIL" />
+      <End Role="PERSONA" EntitySet="PERSONA" />
+    </AssociationSet>
+    <AssociationSet Name="PRODUCTO_OFERTA_FRUTA_FK" Association="Self.PRODUCTO_OFERTA_FRUTA_FK">
+      <End Role="FRUTA" EntitySet="FRUTA" />
+      <End Role="PRODUCTO_OFERTA" EntitySet="PRODUCTO_OFERTA" />
+    </AssociationSet>
+    <AssociationSet Name="PRODUCTO_OFERTA_VENTA_FK" Association="Self.PRODUCTO_OFERTA_VENTA_FK">
+      <End Role="OFERTA_VENTA" EntitySet="OFERTA_VENTA" />
+      <End Role="PRODUCTO_OFERTA" EntitySet="PRODUCTO_OFERTA" />
+    </AssociationSet>
+    <AssociationSet Name="PRODUCTO_PROCESO_PRODUCTO_FK" Association="Self.PRODUCTO_PROCESO_PRODUCTO_FK">
+      <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+      <End Role="PRODUCTO_PROCESO" EntitySet="PRODUCTO_PROCESO" />
+    </AssociationSet>
+    <AssociationSet Name="SEGURO_VENTA_TIPO_SEGURO_FK" Association="Self.SEGURO_VENTA_TIPO_SEGURO_FK">
+      <End Role="TIPO_SEGURO" EntitySet="TIPO_SEGURO" />
+      <End Role="SEGURO_VENTA" EntitySet="SEGURO_VENTA" />
+    </AssociationSet>
+    <AssociationSet Name="VENTA_PROCESO_VENTA_FK" Association="Self.VENTA_PROCESO_VENTA_FK">
+      <End Role="PROCESO_VENTA" EntitySet="PROCESO_VENTA" />
+      <End Role="VENTA" EntitySet="VENTA" />
+    </AssociationSet>
+    <AssociationSet Name="VENTA_SEGURO_VENTA_FK" Association="Self.VENTA_SEGURO_VENTA_FK">
+      <End Role="SEGURO_VENTA" EntitySet="SEGURO_VENTA" />
+      <End Role="VENTA" EntitySet="VENTA" />
+    </AssociationSet>
+    <AssociationSet Name="VENTA_SUBASTA_TRANSPORTE_FK" Association="Self.VENTA_SUBASTA_TRANSPORTE_FK">
+      <End Role="SUBASTA_TRANSPORTE" EntitySet="SUBASTA_TRANSPORTE" />
+      <End Role="VENTA" EntitySet="VENTA" />
+    </AssociationSet>
+    <AssociationSet Name="VENTA_TIPO_VENTA_FK" Association="Self.VENTA_TIPO_VENTA_FK">
+      <End Role="TIPO_VENTA" EntitySet="TIPO_VENTA" />
+      <End Role="VENTA" EntitySet="VENTA" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

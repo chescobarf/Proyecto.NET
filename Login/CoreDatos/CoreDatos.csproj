@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{852DC0E4-E6BE-41BA-9B47-788DCC1AB577}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CoreDatos</RootNamespace>
+    <AssemblyName>CoreDatos</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.19.3.1\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CALIDAD_FRUTA.cs">
+      <DependentUpon>FeriaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CONTRATO.cs">
+      <DependentUpon>FeriaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DETALLE_OFERTA.cs">
+      <DependentUpon>FeriaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DETALLE_VENTA.cs">
+      <DependentUpon>FeriaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FeriaVirtual.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FeriaVirtual.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FeriaVirtual.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FeriaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FeriaVirtual.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FeriaVirtual.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="FRUTA.cs">
+      <DependentUpon>FeriaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOGIN.cs">
+      <DependentUpon>FeriaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OFERTA_PROCESO_VENTA.cs">
+      <DependentUpon>FeriaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OFERTA_SUBASTA.cs">
+      <DependentUpon>FeriaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OFERTA_SUSBASTA.cs">
+      <DependentUpon>FeriaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OFERTA_VENTA.cs">
+      <DependentUpon>FeriaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PERFIL.cs">
+      <DependentUpon>FeriaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PERSONA.cs">
+      <DependentUpon>FeriaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROCESO_VENTA.cs">
+      <DependentUpon>FeriaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUCTO.cs">
+      <DependentUpon>FeriaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUCTO_OFERTA.cs">
+      <DependentUpon>FeriaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUCTO_PROCESO.cs">
+      <DependentUpon>FeriaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SEGURO_VENTA.cs">
+      <DependentUpon>FeriaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SUBASTA_TRANSPORTE.cs">
+      <DependentUpon>FeriaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SUSBASTA.cs">
+      <DependentUpon>FeriaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIPO_SEGURO.cs">
+      <DependentUpon>FeriaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIPO_VENTA.cs">
+      <DependentUpon>FeriaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VENTA.cs">
+      <DependentUpon>FeriaVirtual.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="FeriaVirtual.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FeriaVirtual.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="FeriaVirtual.edmx.diagram">
+      <DependentUpon>FeriaVirtual.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FeriaVirtual.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>FeriaVirtual.Context.cs</LastGenOutput>
+      <DependentUpon>FeriaVirtual.edmx</DependentUpon>
+    </Content>
+    <Content Include="FeriaVirtual.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FeriaVirtual.edmx</DependentUpon>
+      <LastGenOutput>FeriaVirtual.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
