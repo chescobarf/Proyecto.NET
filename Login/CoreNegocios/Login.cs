@@ -20,12 +20,12 @@ namespace CoreNegocios
             PERSONA_RUT = 0;
         }
 
-        public bool Validar(decimal rut, string pass)
+        public bool Validar(Login log)
         {
             try
             { 
-                CapaDeDatos.LOGIN u = CommonBC.Modelo.LOGIN.First(p => p.PERSONA_RUT == PERSONA_RUT);
-                if (u.PASSWORD == PASSWORD)
+                CapaDeDatos.LOGIN u = CommonBC.Modelo.LOGIN.First(p => p.PERSONA_RUT == log.PERSONA_RUT);
+                if (u.PASSWORD == log.PASSWORD)
                 {
                     return true;
                 }
@@ -63,12 +63,14 @@ namespace CoreNegocios
 
             foreach (CapaDeDatos.LOGIN registro in listaDALC)
             {
-                Login log = new Login();
-                log.PASSWORD = registro.PASSWORD;
-                log.PERSONA_RUT = registro.PERSONA_RUT;
-                log.ESTADO = registro.ESTADO;
+				Login log = new Login
+				{
+					PASSWORD = registro.PASSWORD,
+					PERSONA_RUT = registro.PERSONA_RUT,
+					ESTADO = registro.ESTADO
+				};
 
-                listaBC.Add(log);
+				listaBC.Add(log);
 
             }
 

@@ -1,0 +1,11 @@
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\obj\Debug\Interfaz.csprojAssemblyReference.cache
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\obj\Debug\Resources\Icons.baml
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\obj\Debug\Resources\IconsNonShared.baml
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\obj\Debug\Admin.g.cs
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\obj\Debug\MainWindow.g.cs
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\obj\Debug\App.g.cs
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\obj\Debug\Login_Content.g.cs
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\obj\Debug\Login_MarkupCompile.cache
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\obj\Debug\Login_MarkupCompile.lref
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\obj\Debug\Login.exe
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\obj\Debug\Login.pdb

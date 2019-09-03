@@ -11,11 +11,15 @@ namespace WebServiceAPI.Controllers
     public class LoginController : ApiController
     {
         Login Log = new Login();
-        
-        //GET http://<server>/api/login     HTTP/1.1
+
+		[HttpPostAttribute]
         public bool PostAuth(decimal usr, string pass)
         {
-            return Log.Validar(usr, pass);
+			Login persona = new Login();
+			persona.PERSONA_RUT = usr;
+			persona.PASSWORD = pass;
+			persona.ESTADO = "1";
+			return Log.Validar(persona);
         }
 
         public List<Login> GetReadAll()
@@ -23,7 +27,7 @@ namespace WebServiceAPI.Controllers
             return Log.ReadAll();
         }
 
-        public List<Login> GetReadAll(decimal usr)
+        public List<Login> GetReadBy(decimal usr)
         {
             return Log.ReadAllByRut(usr);
         }
