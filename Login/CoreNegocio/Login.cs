@@ -24,31 +24,32 @@ namespace CoreNegocio
             PERSONA_RUT = 0;
         }
 
-        public Persona Read()
+        public bool Read()
         {
             try
             {
-                CoreDatos.LOGIN resp = CommonBC.Modelo.LOGIN.First(e => e.PERSONA_RUT == PERSONA_RUT && e.PASSWORD == PASSWORD);
-
-                ESTADO = resp.ESTADO;
-                PERSONA_RUT = resp.PERSONA_RUT;
-
-                if (int.Parse(ESTADO) == 1)
+                CoreDatos.LOGIN resp =  CommonBC.Modelo.LOGIN.First(e => e.PERSONA_RUT == PERSONA_RUT && e.PASSWORD == PASSWORD);
+				
+				//Persona newPerson = new Persona();
+				if (ESTADO=="1")
                 {
-                    Persona newPerson = new Persona();
-                    newPerson.RUT = PERSONA_RUT;
-                    newPerson.Read();
-                    return newPerson;
+					//newPerson.RUT = PERSONA_RUT;
+					//return newPerson.Read();
+					return true;
+                    
                 }
                 else
                 {
-                    return null;
+                    return false;
                 }
             }
             catch (Exception ex)
             {
-                return null;
+                return false;
             }
         }
+
+
+
     }
 }

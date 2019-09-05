@@ -30,22 +30,25 @@ namespace CoreNegocio
             PERFIL_ID_PERFIL = 0;
         }
 
-        public bool Read()
+        public Persona Read()
         {
             try
             {
                 CoreDatos.PERSONA resp = CommonBC.Modelo.PERSONA.First(e => e.RUT == RUT);
-
-                RUT_DV = resp.RUT_DV;
-                NOMBRE = resp.NOMBRE;
-                APELLIDO = resp.APELLIDO;
-                EMAIL = resp.EMAIL;
-                PERFIL_ID_PERFIL = resp.PERFIL_ID_PERFIL;
-                return true;
+				Persona p = new Persona
+				{
+					RUT = resp.RUT,
+					RUT_DV = resp.RUT_DV,
+					NOMBRE = resp.NOMBRE,
+					APELLIDO = resp.APELLIDO,
+					EMAIL = resp.EMAIL,
+					PERFIL_ID_PERFIL = resp.PERFIL_ID_PERFIL
+				};
+				return p;
             }
             catch (Exception ex)
             {
-                return false;
+                return null;
             }
         }
     }

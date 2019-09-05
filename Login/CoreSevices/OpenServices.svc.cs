@@ -13,14 +13,20 @@ namespace CoreSevices
     // NOTA: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione OpenServices.svc o OpenServices.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class OpenServices : IOpenServices
     {
-        public bool ValidarUsuario(int user, string pass)
+		public string ValidarLogin(string loginJson)
+		{
+			throw new NotImplementedException();
+		}
+
+		public bool ValidarUsuario(string user, string pass)
         {
             Login userLogin = new Login();
-            userLogin.PERSONA_RUT = user;
+            userLogin.PERSONA_RUT = decimal.Parse(user);
             userLogin.PASSWORD = pass;
-            Persona newPerson = userLogin.Read();
+			userLogin.ESTADO = "1";
+            //Persona newPerson = userLogin.Read();
 
-            if (newPerson != null)
+            if (userLogin != null)
             {
                 return true;
             }
@@ -30,21 +36,21 @@ namespace CoreSevices
             }
         }
 
-        public string ValidarLogin(string loginJson)
-        {
-            Login userLogin = new Login();
-            userLogin = JsonConvert.DeserializeObject<Login>(loginJson);
-            Persona newPerson = userLogin.Read();
-            string userSerializado = JsonConvert.SerializeObject(newPerson);
+        //public string ValidarLogin(string loginJson)
+        //{
+        //    Login userLogin = new Login();
+        //    userLogin = JsonConvert.DeserializeObject<Login>(loginJson);
+        //    //Persona newPerson = userLogin.Read();
+        //    //string userSerializado = JsonConvert.SerializeObject(newPerson);
 
-            if (newPerson != null)
-            {
-                return userSerializado;
-            }
-            else
-            {
-                return null;
-            }
-        }
+        //    if (newPerson != null)
+        //    {
+        //        return userSerializado;
+        //    }
+        //    else
+        //    {
+        //        return null;
+        //    }
+        //}
     }
 }

@@ -49,3 +49,6 @@ A:\WorkSpace\GITHUB\Proyecto.NET\Login\CoreSevices\obj\Debug\CoreSevices.csproj.
 A:\WorkSpace\GITHUB\Proyecto.NET\Login\CoreSevices\obj\Debug\CoreSevices.csproj.CopyComplete
 A:\WorkSpace\GITHUB\Proyecto.NET\Login\CoreSevices\obj\Debug\CoreSevices.dll
 A:\WorkSpace\GITHUB\Proyecto.NET\Login\CoreSevices\obj\Debug\CoreSevices.pdb
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\CoreSevices\bin\Newtonsoft.Json.xml
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\CoreSevices\bin\EntityFramework.SqlServer.dll
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\CoreSevices\bin\EntityFramework.SqlServer.xml

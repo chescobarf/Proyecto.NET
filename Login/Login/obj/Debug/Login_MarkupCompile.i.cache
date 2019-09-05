@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 A:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\App.xaml
-3-1260861683
+7-69923605
 1347288226
-9-1518462119
-25115941339
-MainWindow.xaml;Resources\Icons.xaml;Resources\IconsNonShared.xaml;
+131326795546
+291884125760
+MainWindow.xaml;Pages\Administrador\vAdmin.xaml;Pages\ClienteExterno\vClienteExterno.xaml;Pages\Comerciante\vComerciante.xaml;Pages\Productor\vProductor.xaml;Resources\Icons.xaml;Resources\IconsNonShared.xaml;
 
 True
 

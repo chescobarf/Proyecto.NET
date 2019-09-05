@@ -40,3 +40,6 @@ A:\WorkSpace\GITHUB\Proyecto.NET\Login\CoreNegocio\bin\Debug\CoreDatos.pdb
 A:\WorkSpace\GITHUB\Proyecto.NET\Login\CoreNegocio\bin\Debug\CoreDatos.dll.config
 A:\WorkSpace\GITHUB\Proyecto.NET\Login\CoreNegocio\bin\Debug\EntityFramework.xml
 A:\WorkSpace\GITHUB\Proyecto.NET\Login\CoreNegocio\obj\Debug\CoreNegocio.csproj.CopyComplete
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\CoreNegocio\bin\Debug\EntityFramework.dll
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\CoreNegocio\bin\Debug\Newtonsoft.Json.dll
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\CoreNegocio\bin\Debug\Newtonsoft.Json.xml

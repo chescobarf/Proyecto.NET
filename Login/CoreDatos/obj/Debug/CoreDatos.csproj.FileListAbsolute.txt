@@ -9,3 +9,5 @@ A:\WorkSpace\GITHUB\Proyecto.NET\Login\CoreDatos\obj\Debug\CoreDatos.csproj.Core
 A:\WorkSpace\GITHUB\Proyecto.NET\Login\CoreDatos\obj\Debug\CoreDatos.csproj.CopyComplete
 A:\WorkSpace\GITHUB\Proyecto.NET\Login\CoreDatos\obj\Debug\CoreDatos.dll
 A:\WorkSpace\GITHUB\Proyecto.NET\Login\CoreDatos\obj\Debug\CoreDatos.pdb
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\CoreDatos\bin\Debug\Newtonsoft.Json.dll
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\CoreDatos\bin\Debug\Newtonsoft.Json.xml

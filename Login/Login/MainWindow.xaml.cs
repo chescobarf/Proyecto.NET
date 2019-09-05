@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
-
+using CoreSevices;
 
 namespace Login
 {
@@ -32,5 +32,21 @@ namespace Login
         {
 			Contacto.IsOpen = true;
         }
-    }
+
+		private void button_Click(object sender, RoutedEventArgs e)
+		{
+			OpenServices services = new OpenServices();
+			string user = textBox.Text;
+			string pass = passwordBox.Password.ToString();
+			if (services.ValidarUsuario(user, pass))
+			{
+				var newForm = new Pages.Administrador.vAdmin();
+				newForm.Show();
+			}
+			else
+			{
+				
+			}
+		}
+	}
 }

@@ -12,7 +12,7 @@ namespace CoreSevices
     public interface IOpenServices
     {
         [OperationContract]
-        bool ValidarUsuario(int username, string password);
+        bool ValidarUsuario(string username, string password);
 
         [OperationContract]
         string ValidarLogin(string loginJson);
