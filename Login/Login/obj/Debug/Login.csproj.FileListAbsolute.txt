@@ -113,3 +113,9 @@ A:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\bin\Debug\EntityFramework.xml
 A:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\obj\Debug\Pages\Administrador\vAdmin.g.cs
 A:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\obj\Debug\Pages\Administrador\vAdmin.baml
 A:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\bin\Debug\Newtonsoft.Json.xml
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\obj\Debug\Pages\ClienteExterno\vClienteExterno.g.cs
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\obj\Debug\Pages\Comerciante\vComerciante.g.cs
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\obj\Debug\Pages\Productor\vProductor.g.cs
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\obj\Debug\Pages\ClienteExterno\vClienteExterno.baml
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\obj\Debug\Pages\Comerciante\vComerciante.baml
+A:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\obj\Debug\Pages\Productor\vProductor.baml

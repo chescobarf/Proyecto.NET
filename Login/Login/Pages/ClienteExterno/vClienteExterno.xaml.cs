@@ -27,5 +27,9 @@ namespace Login.Pages.ClienteExterno
         {
             InitializeComponent();
         }
-    }
+		private void Tile_Click(object sender, RoutedEventArgs e)
+		{
+			Configuracion.IsOpen = true;
+		}
+	}
 }

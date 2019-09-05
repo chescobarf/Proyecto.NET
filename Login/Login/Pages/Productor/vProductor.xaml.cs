@@ -21,11 +21,15 @@ namespace Login.Pages.Productor
     /// <summary>
     /// Lógica de interacción para vProductor.xaml
     /// </summary>
-    public partial class vProductor : Window
+    public partial class vProductor : MetroWindow
     {
         public vProductor()
         {
             InitializeComponent();
         }
-    }
+		private void Tile_Click(object sender, RoutedEventArgs e)
+		{
+			Configuracion.IsOpen = true;
+		}
+	}
 }

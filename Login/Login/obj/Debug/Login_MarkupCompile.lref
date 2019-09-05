@@ -2,4 +2,7 @@
 FA:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\App.xaml;;
 FA:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\MainWindow.xaml;;
 FA:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\Pages\Administrador\vAdmin.xaml;;
+FA:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\Pages\ClienteExterno\vClienteExterno.xaml;;
+FA:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\Pages\Comerciante\vComerciante.xaml;;
+FA:\WorkSpace\GITHUB\Proyecto.NET\Login\Login\Pages\Productor\vProductor.xaml;;
 
