@@ -90,6 +90,26 @@
                     <TextBox x:Name="txtFruta" Controls:TextBoxHelper.ClearTextButton="True" Canvas.Left="74" Canvas.Top="240" Width="156" />
                 </Canvas>
             </Controls:Flyout>
+            <Controls:Flyout x:Name="AgregarUser" Position="Left" Grid.RowSpan="2" Width="375" Foreground="White" Header="Formulario Creacion Usuario">
+                <Controls:Flyout.Background>
+                    <SolidColorBrush Color="#FF232323"/>
+                </Controls:Flyout.Background>
+                <Canvas>
+                    <Controls:Tile x:Name="btnAgregar" Margin="0" Canvas.Left="90" Canvas.Top="492" Height="125" Width="126" Title="Guardar" HorizontalTitleAlignment="Center" Background="{x:Null}">
+                        <iconPacks:PackIconMaterial Kind="ContentSave" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="55" Width="55"  Canvas.Left="174" Canvas.Top="208"  />
+                    </Controls:Tile>
+                    <Label Content="RUT:" Foreground="White" Background="{x:Null}" Canvas.Left="74" Canvas.Top="47" Height="36" Width="156" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBox x:Name="txtNombre" Controls:TextBoxHelper.ClearTextButton="True" Canvas.Left="74" Canvas.Top="88" Width="156" />
+                    <Label Content="DV:" Foreground="White" Background="{x:Null}" Canvas.Left="74" Canvas.Top="134" Height="36" Width="156" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBox x:Name="txtDV" Controls:TextBoxHelper.ClearTextButton="True" Canvas.Left="74" Canvas.Top="175" Width="156" />
+                    <Label Content="NOMBRE:" Foreground="White" Background="{x:Null}" Canvas.Left="74" Canvas.Top="227" Height="36" Width="156" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBox x:Name="txtNombreUser" Controls:TextBoxHelper.ClearTextButton="True" Canvas.Left="74" Canvas.Top="268" Width="156" />
+                    <Label Content="APELLIDO:" Foreground="White" Background="{x:Null}" Canvas.Left="74" Canvas.Top="320" Height="36" Width="156" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBox x:Name="txtApellido" Controls:TextBoxHelper.ClearTextButton="True" Canvas.Left="74" Canvas.Top="361" Width="156" />
+                    <Label Content="PERFIL:" Foreground="White" Background="{x:Null}" Canvas.Left="74" Canvas.Top="405" Height="36" Width="156" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBox x:Name="txtPerfil" Controls:TextBoxHelper.ClearTextButton="True" Canvas.Left="74" Canvas.Top="446" Width="156" />
+                </Canvas>
+            </Controls:Flyout>
         </Grid>
     </StackPanel>
 </Controls:MetroWindow>
