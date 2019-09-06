@@ -42,6 +42,7 @@ namespace Login
 			{
 				var newForm = new Pages.Administrador.vAdmin();
 				newForm.Show();
+				Close();
 			}
 			else
 			{

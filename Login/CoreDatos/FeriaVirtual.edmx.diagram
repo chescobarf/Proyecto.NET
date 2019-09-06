@@ -14,7 +14,7 @@
         <EntityTypeShape EntityType="Model.OFERTA_SUBASTA" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.OFERTA_SUSBASTA" Width="1.5" PointX="8" PointY="14.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.OFERTA_VENTA" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.PERFIL" Width="1.5" PointX="1.5" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PERFIL" Width="1.5" PointX="0.75" PointY="12.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.PERSONA" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.PROCESO_VENTA" Width="1.5" PointX="3.75" PointY="11.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.PRODUCTO" Width="1.5" PointX="5.75" PointY="11.625" IsExpanded="true" />

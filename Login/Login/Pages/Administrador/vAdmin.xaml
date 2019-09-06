@@ -34,7 +34,7 @@
                 </Controls:Tile.Background>
                 <iconPacks:PackIconMaterial Kind="AccountEdit" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="75" Width="75"  Canvas.Left="174" Canvas.Top="208"  />
             </Controls:Tile>
-            <Controls:Tile Margin="195,33,905,339" Width="Auto" Height="Auto" Title="Crear Frutas" Grid.Row="1">
+            <Controls:Tile x:Name="btnCrearFrutas" Margin="195,33,905,339" Width="Auto" Height="Auto" Title="Crear Frutas" Grid.Row="1" Click="btnCrearFrutas_Click">
                 <Controls:Tile.Background>
                     <SolidColorBrush Color="#CCE51400" Opacity="0.85"/>
                 </Controls:Tile.Background>
@@ -68,7 +68,7 @@
             <Controls:Tile Background="#CC3E3A3A" Margin="25,24,1154,37" Opacity="1" Height="Auto" Width="Auto">
                 <iconPacks:PackIconMaterial Kind="Account" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="75" Width="75"  Canvas.Left="174" Canvas.Top="208"  />
             </Controls:Tile>
-            <Controls:Flyout x:Name="Configuracion" Position="Right" Grid.RowSpan="2" Width="230" Foreground="White" Header="Configuraciones">
+            <Controls:Flyout x:Name="Configuracion" Position="Right" Grid.RowSpan="2" Width="230" Foreground="White" Header="Configuraciones" Visibility="Hidden">
                 <Controls:Flyout.Background>
                     <SolidColorBrush Color="#FF232323" Opacity="0.9"/>
                 </Controls:Flyout.Background>
@@ -78,8 +78,18 @@
                     </Controls:Tile>
                 </Canvas>
             </Controls:Flyout>
-
-
+            <Controls:Flyout x:Name="CrearFrutas" Position="Right" Grid.RowSpan="2" Width="329" Foreground="White" Header="Formulario Creacion Frutas">
+                <Controls:Flyout.Background>
+                    <SolidColorBrush Color="#FF232323" Opacity="0.9"/>
+                </Controls:Flyout.Background>
+                <Canvas>
+                    <Controls:Tile x:Name="btnGuardar" Margin="0" Canvas.Left="96" Canvas.Top="477" Height="125" Width="126" Title="Guardar" HorizontalTitleAlignment="Center" Background="{x:Null}">
+                        <iconPacks:PackIconMaterial Kind="ContentSave" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="55" Width="55"  Canvas.Left="174" Canvas.Top="208"  />
+                    </Controls:Tile>
+                    <Label Content="Nombre Fruta:" Foreground="White" Background="{x:Null}" Canvas.Left="74" Canvas.Top="179" Height="36" Width="156" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBox x:Name="txtFruta" Controls:TextBoxHelper.ClearTextButton="True" Canvas.Left="74" Canvas.Top="240" Width="156" />
+                </Canvas>
+            </Controls:Flyout>
         </Grid>
     </StackPanel>
 </Controls:MetroWindow>

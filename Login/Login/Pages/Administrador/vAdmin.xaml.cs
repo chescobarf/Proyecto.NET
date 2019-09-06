@@ -31,7 +31,26 @@ namespace Login.Pages.Administrador
 
 		private void Tile_Click(object sender, RoutedEventArgs e)
 		{
-			Configuracion.IsOpen = true;
+			if(Configuracion.IsOpen is false)
+			{
+				Configuracion.IsOpen = true;
+			}
+			else
+			{
+				Configuracion.IsOpen = false;
+			}
+		}
+
+		private void btnCrearFrutas_Click(object sender, RoutedEventArgs e)
+		{
+			if (CrearFrutas.IsOpen is false)
+			{
+				CrearFrutas.IsOpen = true;
+			}
+			else
+			{
+				CrearFrutas.IsOpen = false;
+			}
 		}
 	}
 }
