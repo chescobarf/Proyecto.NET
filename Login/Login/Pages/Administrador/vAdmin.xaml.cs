@@ -52,5 +52,17 @@ namespace Login.Pages.Administrador
 				CrearFrutas.IsOpen = false;
 			}
 		}
+
+		private void btnAddUser_Click(object sender, RoutedEventArgs e)
+		{
+			if (AgregarUser.IsOpen is false)
+			{
+				AgregarUser.IsOpen = true;
+			}
+			else
+			{
+				AgregarUser.IsOpen = false;
+			}
+		}
 	}
 }

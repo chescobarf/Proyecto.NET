@@ -28,7 +28,7 @@
                     <SolidColorBrush Color="#FF151515" Opacity="0.60"/>
                 </Rectangle.Fill>
             </Rectangle>
-            <Controls:Tile Margin="10,33,1090,339" Width="Auto" Height="Auto" Title="Agregar Usuarios" Grid.Row="1">
+            <Controls:Tile x:Name="btnAddUser" Margin="10,33,1090,339" Width="Auto" Height="Auto" Title="Agregar Usuarios" Grid.Row="1" Click="btnAddUser_Click">
                 <Controls:Tile.Background>
                     <SolidColorBrush Color="#CCE51400" Opacity="0.85"/>
                 </Controls:Tile.Background>
@@ -90,7 +90,7 @@
                     <TextBox x:Name="txtFruta" Controls:TextBoxHelper.ClearTextButton="True" Canvas.Left="74" Canvas.Top="240" Width="156" />
                 </Canvas>
             </Controls:Flyout>
-            <Controls:Flyout x:Name="AgregarUser" Position="Left" Grid.RowSpan="2" Width="375" Foreground="White" Header="Formulario Creacion Usuario">
+            <Controls:Flyout x:Name="AgregarUser" Position="Left" Grid.RowSpan="2" Width="375" Foreground="White" Header="Formulario Creacion Usuario" Visibility="Hidden">
                 <Controls:Flyout.Background>
                     <SolidColorBrush Color="#FF232323"/>
                 </Controls:Flyout.Background>
